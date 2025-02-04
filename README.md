@@ -1,4 +1,4 @@
-# Extract-Text-from-PDF-to-a-CSV-list-using-Python
+# Extract Text from PDF to a CSV list using Python
 
 Overview
 
