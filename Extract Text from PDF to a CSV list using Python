@@ -1,0 +1,38 @@
+#Import libraries
+from pypdf import PdfReader
+import pandas as pd
+
+#read the file using PdfReader place it on an objetc
+reader = PdfReader('Money2020_USA_2024_-_Final_Attending_Companies_List.pdf')
+print(len(reader.pages)) #to see the #Number of pages
+
+#using reader to grab the first page
+page = reader.pages[0] #Index added from 0 meaning 1rst page
+
+#Firts page extracted into text
+print(page.extract_text())
+
+# Extract all text from every page (using a loop)
+all_text = ""
+for i in range(len(reader.pages)):
+    page = reader.pages[i]
+    all_text += page.extract_text() + "\n" 
+    print(page.extract_text())
+
+#Transform the text to a data frame
+
+lines = all_text.strip().split('\n')# Split the extracted text into rows
+# Let's create a DataFrame from the lines
+df = pd.DataFrame(lines, columns=['Companies'])
+df
+
+# WAIT! WE ARE NOT DONE YET!
+# Let's clean the data (remove the first 4 and the last 2 lines)
+
+df.drop([0, 1, 2, 3, 4, 3394, 3395], inplace=True)
+df
+
+# save it to CSV
+df.to_csv('Money2020_Attending_Companies_List.csv', index=False)
+
+print("CSV file 'Money2020_Attending_Companies_List.csv' created successfully!")
