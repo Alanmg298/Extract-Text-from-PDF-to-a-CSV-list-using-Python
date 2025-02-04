@@ -4,6 +4,8 @@ Overview
 
   This project provides a Python-based solution to extract text from a PDF document and save the extracted content into a CSV file. The main goal is to automate the process of extracting     structured data, such as company names or other information from a PDF, and converting it into a clean and usable format for further processing or analysis.
 
+      **** Please check the Wiki section for a visual explanation ****
+
 Features
   PDF Text Extraction: The program extracts all text from a given PDF file.
   Text Cleaning: It provides basic functionality to clean the extracted text, including removing unwanted rows and keeping only the relevant data.
