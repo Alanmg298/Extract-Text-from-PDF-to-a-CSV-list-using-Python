@@ -35,3 +35,8 @@ The script follows these steps:
   Extract Text: The PdfReader from the pypdf library is used to read the PDF file. The text from each page is concatenated into a single string.
   Clean the Data: The extracted text is cleaned by removing the first 4 lines (which may contain headers or unwanted information) and the last 2 lines (which may contain additional instructions or footer content).
   Store in CSV: After cleaning the data, the relevant text (such as company names) is stored in a CSV file. The CSV file is created using the pandas library, with the company names in a single column.
+
+I'm basing this code on the first 6 minutes of 
+https://www.youtube.com/watch?v=G0PApj7YPBo
+All credits to Pythonology :)
+https://www.youtube.com/@Pythonology
